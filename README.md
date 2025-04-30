@@ -1,3 +1,5 @@
+<span style="color:gray">
+
 # rms-utils
 
 楽天RMSに自動ログインするためのPythonモジュールです（Seleniumベース）。
@@ -14,3 +16,5 @@
 
 ```bash
 pip install git+https://github.com/egkoichinft/rms-utils.git
+
+</span>
