@@ -18,3 +18,27 @@
 
 ```bash
 pip install git+https://github.com/egkoichinft/rms-utils.git
+
+
+## 使い方
+
+以下のように `rms_login_selenium` を呼び出します：
+
+```python
+from rms_login import rms_login_selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+# 認証情報
+LOGIN_ID = 'your_login_id'
+LOGIN_PASS = 'your_login_password'
+USER_ID = 'your_user_id'
+USER_PASS = 'your_user_pass'
+
+# ログイン実行
+rms_login_selenium(driver, LOGIN_ID, LOGIN_PASS, USER_ID, USER_PASS)
